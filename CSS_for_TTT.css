@@ -3,7 +3,7 @@
     text-align: center;
      
 }
-div .row>div {
+.row>div {
     float: left;
     height: 100px;
     width: 100px;
