@@ -1,5 +1,6 @@
 let cells = document.querySelectorAll(".row>div");
 console.log(cells);
+let announceDiv = document.getElementsByClassName("announce")[0]
 // IndexPositons are 0-8
 //0: top left
 //1: top middle
@@ -43,8 +44,7 @@ function checkWin() {
     cells[0].textContent === cells[1].textContent &&
     cells[1].textContent === cells[2].textContent &&
     (cells[0].textContent === "💣" || cells[0].textContent === "🔪")
-  ) {
-  }
+  ) {}
   if (
     cells[3].textContent === cells[4].textContent &&
     cells[4].textContent === cells[5].textContent &&
@@ -79,8 +79,7 @@ function checkWin() {
     cells[3].textContent === cells[5].textContent &&
     cells[5].textContent === cells[7].textContent &&
     (cells[3].textContent === "💣" || cells[3].textContent === "🔪")
-  ) {
-  }
+  ) {}
 }
 
 //  const wincombos = [
