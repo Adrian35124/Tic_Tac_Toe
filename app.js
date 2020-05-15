@@ -1,6 +1,7 @@
 let cells = document.querySelectorAll(".row>div");
 console.log(cells);
 let announceDiv = document.getElementsByClassName("announce")[0];
+let announceDraw = document.getElementsByClassName("draw")[0];
 // IndexPositons are 0-8
 //0: top left
 //1: top middle
@@ -15,11 +16,11 @@ let playerTurn = true;
 const players = [
   {
     name: "P1",
-    playerType: "💣",
+    playerType: "⚽",
   },
   {
     name: "P2",
-    playerType: "🔪",
+    playerType: "🏀",
   },
 ];
 for (let i = 0; i < cells.length; i++) {
@@ -29,10 +30,10 @@ function cellClicked() {
   console.log(this.innerHTML);
   console.log(this.id);
   if (playerTurn && this.innerHTML == "") {
-    event.target.textContent = "💣";
+    event.target.textContent = "⚽";
     playerTurn = false;
   } else if (!playerTurn && this.innerHTML == "") {
-    event.target.textContent = "🔪";
+    event.target.textContent = "🏀";
     playerTurn = true;
   } else {
     alert("DO NOT TRY TO CHEAT ! THIS PROJECT WAS HARD ENOUGH ALREADY !");
@@ -43,92 +44,95 @@ function checkWin() {
   if (
     cells[0].textContent === cells[1].textContent &&
     cells[1].textContent === cells[2].textContent &&
-    (cells[0].textContent === "💣" || cells[0].textContent === "🔪")
+    (cells[0].textContent === "⚽" || cells[0].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-      announceDiv.textContent = `🔪 Win!`;
+      announceDiv.textContent = `🏀 Win!`;
     } else {
-        announceDiv.textContent = `💣 Win!`;
+        announceDiv.textContent = `⚽ Win!`;
     }
   }
 
   if (
     cells[3].textContent === cells[4].textContent &&
     cells[4].textContent === cells[5].textContent &&
-    (cells[3].textContent === "💣" || cells[3].textContent === "🔪")
+    (cells[3].textContent === "⚽" || cells[3].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
   if (
     cells[6].textContent === cells[7].textContent &&
     cells[7].textContent === cells[8].textContent &&
-    (cells[6].textContent === "💣" || cells[6].textContent === "🔪")
+    (cells[6].textContent === "⚽" || cells[6].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
   if (
     cells[0].textContent === cells[3].textContent &&
     cells[3].textContent === cells[6].textContent &&
-    (cells[0].textContent === "💣" || cells[0].textContent === "🔪")
+    (cells[0].textContent === "⚽" || cells[0].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
   if (
     cells[1].textContent === cells[4].textContent &&
     cells[4].textContent === cells[7].textContent &&
-    (cells[1].textContent === "💣" || cells[1].textContent === "🔪")
+    (cells[1].textContent === "⚽" || cells[1].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
   if (
     cells[2].textContent === cells[5].textContent &&
     cells[5].textContent === cells[8].textContent &&
-    (cells[2].textContent === "💣" || cells[2].textContent === "🔪")
+    (cells[2].textContent === "⚽" || cells[2].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
   if (
     cells[0].textContent === cells[4].textContent &&
     cells[4].textContent === cells[8].textContent &&
-    (cells[0].textContent === "💣" || cells[0].textContent === "🔪")
+    (cells[0].textContent === "⚽" || cells[0].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
   if (
     cells[3].textContent === cells[5].textContent &&
     cells[5].textContent === cells[7].textContent &&
-    (cells[3].textContent === "💣" || cells[3].textContent === "🔪")
+    (cells[3].textContent === "⚽" || cells[3].textContent === "🏀")
   ) {
     if (playerTurn === true) {
-        announceDiv.textContent = `🔪 Win!`;
+        announceDiv.textContent = `🏀 Win!`;
       } else {
-          announceDiv.textContent = `💣 Win!`;
+          announceDiv.textContent = `⚽ Win!`;
       }
   }
+} if (cells[i] > cells.length) {
+    announceDraw.textContent = "DRAW NO WINNERS !"
+    
 }
 
 //  const wincombos = [
