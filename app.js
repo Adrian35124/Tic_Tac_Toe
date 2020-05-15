@@ -35,9 +35,7 @@ function cellClicked() {
   } else if (!playerTurn && this.innerHTML == "") {
     event.target.textContent = "🏀";
     playerTurn = true;
-  } else {
-    alert("DO NOT TRY TO CHEAT ! THIS PROJECT WAS HARD ENOUGH ALREADY !");
-  }
+  } 
   checkWin();
 }
 function checkWin() {
@@ -129,12 +127,21 @@ function checkWin() {
       } else {
           announceDiv.textContent = `⚽ Win!`;
       }
-  }
-} if (cells[i] > cells.length) {
-    announceDraw.textContent = "DRAW NO WINNERS !"
-    
+  } 
+    if (
+        cells[0].textContent != '' 
+    && cells[1].textContent != '' 
+    && cells[2].textContent != "" 
+    && cells[3].textContent != "" 
+    && cells[4].textContent != "" 
+    && cells[5].textContent != "" 
+    && cells[6].textContent != "" 
+    && cells[7].textContent != "" 
+    && cells[8].textContent != "") { 
+        announceDraw.textContent = "Draw NO WINNERS!";
+      
+    }
 }
-
 //  const wincombos = [
 //  [0, 1, 2], //0
 //  [3, 4, 5], //1
