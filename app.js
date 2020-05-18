@@ -37,7 +37,9 @@ function cellClicked() {
   } else if (!playerTurn && this.innerHTML == "") {
     event.target.textContent = "🏀";
     playerTurn = true;
-  } 
+  } else {
+    alert("DO NOT TRY TO CHEAT THIS PROJECT WAS HARD ENOUGH!")
+  }
   checkWin();
 }
 function checkWin() {
