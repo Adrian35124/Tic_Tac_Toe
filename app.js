@@ -2,6 +2,8 @@ let cells = document.querySelectorAll(".row>div");
 console.log(cells);
 let announceDiv = document.getElementsByClassName("announce")[0];
 let announceDraw = document.getElementsByClassName("draw")[0];
+let button = document.querySelector("button");
+button.innerHTML = "Reset the Board";
 // IndexPositons are 0-8
 //0: top left
 //1: top middle
@@ -139,8 +141,16 @@ function checkWin() {
     && cells[7].textContent != "" 
     && cells[8].textContent != "") { 
         announceDraw.textContent = "Draw NO WINNERS!";
-      
+        
     }
+} 
+button.addEventListener("click", clearBoard);
+function clearBoard() {
+ for (let squares of cells) {
+   squares.textContent = "";
+   announceDraw.textContent = "";
+   location.reload();
+ }
 }
 //  const wincombos = [
 //  [0, 1, 2], //0

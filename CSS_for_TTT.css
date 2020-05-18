@@ -26,3 +26,14 @@
 .right {
     border-left: 1px solid black;
 }
+button {
+    margin-top: 10px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0em;
+    background: salmon;
+    border: black;
+}
+button:hover {
+    background: steelblue;
+}
